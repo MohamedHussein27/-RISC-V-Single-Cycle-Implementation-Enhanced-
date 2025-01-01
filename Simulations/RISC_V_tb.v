@@ -5,8 +5,7 @@ wire [2:0] ALUControl;
 wire [1:0] ImmSrc , ResultSrc;
 wire PCSrc , MemWrite , ALUSrc , RegWrite , Jump , Branch, Zero ;
 
-RISC_V_Wrapper dut(rst , clk,  PCNext, Result, PCPlus4, Reg1_out, Reg2_out, ImmExt, SrcB, ALUResult, PCTarget, ReadData,
-ALUControl,ImmSrc , ResultSrc,PCSrc , MemWrite , ALUSrc , RegWrite , Jump , Branch, Zero);
+RISC_V_Wrapper dut(rst , clk,  PCNext);
 initial begin
     clk = 0;
     forever #10 clk = ~clk; // 20ns period clock
